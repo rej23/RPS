@@ -35,9 +35,9 @@ def play_round():
 num_rounds = 0
 user_wins = 0
 computer_wins = 0
-play_again = "y"
+play_again = "yes"
 
-while play_again.lower() == "y":
+while play_again.lower() == "yes":
     num_rounds += 1
     result = play_round()
     if result == "user":
@@ -51,4 +51,10 @@ while play_again.lower() == "y":
     print(f"Rounds played: {num_rounds}")
     print(f"User wins: {user_wins}")
     print(f"Computer wins: {computer_wins}")
-    play_again = input("Play another round? (y/n) ")
+    play_again = input("Play another round? (yes/no) ")
+
+else:
+    if play_again.lower() == "no":
+        print("thank you for playing")
+
+        
